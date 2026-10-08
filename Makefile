@@ -3,7 +3,7 @@
 CC ?= gcc
 CFLAGS ?= -std=c11 -Wall -Wextra -Werror -pedantic -O2
 BIN = htmlprintf-tester.exe
-SRCS = main.c report.c
+SRCS = main.c
 HDRS = libprintf-shim.h
 REPORT = results/report.html
 
