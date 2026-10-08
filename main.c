@@ -97,8 +97,8 @@ static int looks_like_printffamily_word_at(const char *p) {
     return is_printffamily_name(buf) ? 1 : 0;
 }
 
-int runtime_argc;
-char **runtime_argv;
+int runtime_argc = 0;
+char **runtime_argv = 0;
 const char *runtime_target = 0;
 
 static int runtime_int_opt(const char *name, int def) {
