@@ -18,4 +18,9 @@ jobs:
       - name: report
         run: make report
       - name: self-check
-        run: make test
+        run: |
+          rm -f htmlprintf-tester.exe
+          make build
+          make fixtures
+          make report
+          make test

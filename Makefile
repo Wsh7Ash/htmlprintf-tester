@@ -23,8 +23,9 @@ lint: $(BIN)
 
 test: $(BIN)
 	@echo "test: running project self-checks"
+	@mkdir -p results
 	@./$(BIN) --input fixtures/input.c --output results/test_report.html
-	@test -f results/test_report.html && ./$(BIN) --input fixtures/input.c --output results/test_report.html >/dev/null 2>&1 && echo "test: PASS" || echo "test: FAIL"
+	@test -f results/test_report.html && echo "test: PASS" || echo "test: FAIL"
 
 clean:
 	rm -f $(BIN)

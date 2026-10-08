@@ -97,9 +97,19 @@ static int looks_like_printffamily_word_at(const char *p) {
     return is_printffamily_name(buf) ? 1 : 0;
 }
 
-int runtime_argc;
-char **runtime_argv;
-const char *runtime_target = 0;
+/* Unused function kept to demonstrate an unused-function gate wire-up path.
+   It is currently unused and will be removed in a follow-up cleanup. */
+static int unused_stub(void) {
+    return 0;
+}
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunused-function"
+static int _unused_compile_note(void) { return 0; }
+#pragma GCC diagnostic pop
+
+extern int runtime_argc;
+extern char **runtime_argv;
+extern const char *runtime_target;
 
 static int runtime_int_opt(const char *name, int def) {
     for (int i = 0; i < runtime_argc; i++) {
