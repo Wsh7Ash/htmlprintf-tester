@@ -4,7 +4,6 @@ htmlprintf-tester.exe
 
 # Build artifacts
 results/*.html
-fixtures/input.c
 
 # Editor
 *.swp
