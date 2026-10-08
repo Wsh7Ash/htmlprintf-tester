@@ -1,0 +1,17 @@
+# Binaries
+*.exe
+htmlprintf-tester.exe
+
+# Build artifacts
+results/*.html
+fixtures/input.c
+
+# Editor
+*.swp
+*~
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
